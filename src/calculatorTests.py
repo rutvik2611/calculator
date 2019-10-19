@@ -1,5 +1,8 @@
 import unittest
 from calculator import calculator
+import numpy as np
+import pandas as pd
+
 
 
 class MyTestCase(unittest.TestCase):
