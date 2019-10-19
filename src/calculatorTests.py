@@ -2,9 +2,6 @@ import unittest
 from calculator import calculator
 
 
-class MyTestCase(unittest.TestCase):
-    def setUp(self) -> None:
-        self.calculator = calculator()
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.calculator, calculator)
@@ -40,5 +37,4 @@ class MyTestCase(unittest.TestCase):
 
 
 
-if __name__ == '__main__':
-    unittest.main()
+

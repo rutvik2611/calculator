@@ -51,6 +51,28 @@ class calculator:
     def __squareRoot__(self, a):
         self.result = math.sqrt(a)
 
+    def __select__(self):
+        print("""
+        0.Add
+        1.Sub
+        2.Mul
+        3.Div
+        4.Squ
+        5.Sqrt
+        6.ReDO
+        7.Exit
+        
+        """)
+        x=input()
 
-
-
+    def week(x):
+        switcher = {
+            0: __add__(a,b),
+            1: __sub__(a,b),
+            2: __mul__(a,b),
+            3: __div__(a,b),
+            4: __square__(a),
+            5: __squareRoot__(a),
+            6: __select__(self)
+        }
+        return switcher.get(i, "Invalid day of week")
