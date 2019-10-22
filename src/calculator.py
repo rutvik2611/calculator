@@ -47,9 +47,11 @@ class calculator:
 
     def __square__(self, a):
         self.result =square(a)
+        return self.result
 
     def __squareRoot__(self, a):
         self.result = math.sqrt(a)
+        return self.result
 
 
 
