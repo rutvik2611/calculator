@@ -1,9 +1,10 @@
 import math
-def addition(a, b):
+import csv
+def addition(a,b):
     c = a + b
     return c
 
-def subtraction(a, b):
+def subtraction(a,b):
     c = a - b
     return c
 
@@ -47,10 +48,10 @@ class calculator:
 
     def __square__(self, a):
         self.result =square(a)
+        return self.result
 
     def __squareRoot__(self, a):
         self.result = math.sqrt(a)
-
-
+        return self.result
 
 

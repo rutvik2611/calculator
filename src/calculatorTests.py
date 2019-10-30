@@ -1,8 +1,10 @@
 import unittest
+import csv
 from calculator import calculator
 
-
 class MyTestCase(unittest.TestCase):
+
+
     def setUp(self) -> None:
         self.calculator = calculator()
 
@@ -10,9 +12,8 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.calculator, calculator)
 
     def test_addition(self):
-        self.calculator.__add__(1, 1)
-        self.assertEqual(self.calculator.result, 2)
-
+        self.calculator.__add__(14, 1)
+        self.assertEqual(self.calculator.result, 15)
 
     def test_subtraction(self):
         self.calculator.__sub__(5, 5)
@@ -36,9 +37,21 @@ class MyTestCase(unittest.TestCase):
 
 
     def test_results_property(self):
+
         self.assertEqual(self.calculator.result, 0)
+
+
+    def test_read_any_csv(self):
+
+        self.assertEqual(0, 0)
+
+
+
+
+
 
 
 
 if __name__ == '__main__':
     unittest.main()
+
