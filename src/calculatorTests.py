@@ -15,64 +15,52 @@ class MyTestCase(unittest.TestCase):
     def test_add_from_csv(self):
 
         y = self.calculator.read_csv("../src/CSV/uadd.csv")
-        a = y[0]
-        b = y[1]
-        c = y[2]
-        for var in range(len(a)):
-            self.calculator.__add__(a[var], b[var])
-            self.assertEqual(self.calculator.result, c[var])
+
+        for var in range(len(y)):
+            self.calculator.__add__(y[0][var], y[1][var])
+            self.assertEqual(self.calculator.result, y[2][var])
 
 
     def test_subtraction(self):
         y = self.calculator.read_csv("../src/CSV/Unit Test Subtraction.csv")
-        a = y[0]
-        b = y[1]
-        c = y[2]
-        for var in range(len(a)):
-            self.calculator.__sub__(a[var], b[var])
-            self.assertEqual(self.calculator.result, c[var]*-1)
+
+        for var in range(len(y)):
+            self.calculator.__sub__(y[0][var], y[1][var])
+            self.assertEqual(self.calculator.result, y[2][var]*-1)
 
 
     def test_multiplication(self):
 
         y = self.calculator.read_csv("../src/CSV/Unit Test Multiplication.csv")
-        a = y[0]
-        b = y[1]
-        c = y[2]
-        for var in range(len(a)):
-            self.calculator.__mul__(a[var], b[var])
-            self.assertEqual(self.calculator.result, c[var])
+
+        for var in range(len(y)):
+            self.calculator.__mul__(y[0][var], y[1][var])
+            self.assertEqual(self.calculator.result, y[2][var])
 
 
 
     def test_division(self):
         y = self.calculator.read_csv("../src/CSV/Unit Test Division.csv")
-        a = y[0]
-        b = y[1]
-        c = y[2]
-        for var in range(len(a)):
-            self.calculator.__div__(b[var],a[var])
-            self.assertEqual(int(self.calculator.result),int(c[var]))
+
+        for var in range(len(y)):
+            self.calculator.__div__(y[1][var], y[0][var])
+            self.assertEqual(int(self.calculator.result),int(y[2][var]))
 
     def test_square(self):
 
         y = self.calculator.read_csv("../src/CSV/Unit Test Square.csv")
-        a = y[0]
-        b = y[1]
 
-        for var in range(len(a)):
-            self.calculator.__square__(a[var])
-            self.assertEqual(self.calculator.result,b[var])
+        for var in range(len(y)):
+            self.calculator.__square__(y[0][var])
+            self.assertEqual(self.calculator.result,y[1][var])
 
 
     def test_squareRoot(self):
         y = self.calculator.read_csv("../src/CSV/Unit Test Square Root.csv")
-        a = y[0]
-        b = y[1]
 
-        for var in range(len(a)):
-            self.calculator.__squareRoot__(a[var])
-            self.assertEqual(int(self.calculator.result), int(b[var]))
+        for var in range(len(y)):
+            self.calculator.__squareRoot__(y[0][var])
+            self.assertEqual(int(self.calculator.result), int(y[1][var]))
 
 
 
