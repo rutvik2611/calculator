@@ -27,7 +27,7 @@ def squareRoot(a):
     math.sqrt(a)
     return c
 
-print("fsefefsf")
+
 
 class calculator:
     result = 0
@@ -69,4 +69,4 @@ class calculator:
 
 
 
->>>>>>> c612f66905fbe7d2e2262d222b613a111a857daf
+
