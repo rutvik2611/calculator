@@ -1,9 +1,13 @@
 import math
-def addition(a, b):
+import csv
+import pandas as pd
+
+
+def addition(a,b):
     c = a + b
     return c
 
-def subtraction(a, b):
+def subtraction(a,b):
     c = a - b
     return c
 
@@ -23,8 +27,11 @@ def squareRoot(a):
     math.sqrt(a)
     return c
 
+print("fsefefsf")
+
 class calculator:
     result = 0
+
 
     def __init__(self):
         pass
@@ -47,10 +54,19 @@ class calculator:
 
     def __square__(self, a):
         self.result =square(a)
+        return self.result
 
     def __squareRoot__(self, a):
         self.result = math.sqrt(a)
+        return self.result
 
+    def read_csv(self,obj):
+
+        data = pd.read_csv(obj)
+        data = data.values
+
+
+<<<<<<< HEAD
     def __select__(self):
         print("""
         0.Add
@@ -76,3 +92,9 @@ class calculator:
             6: __select__(self)
         }
         return switcher.get(i, "Invalid day of week")
+=======
+        return data
+
+
+
+>>>>>>> c612f66905fbe7d2e2262d222b613a111a857daf
