@@ -1,5 +1,8 @@
 import math
 import csv
+import pandas as pd
+
+
 def addition(a,b):
     c = a + b
     return c
@@ -24,8 +27,11 @@ def squareRoot(a):
     math.sqrt(a)
     return c
 
+print("fsefefsf")
+
 class calculator:
     result = 0
+
 
     def __init__(self):
         pass
@@ -53,5 +59,14 @@ class calculator:
     def __squareRoot__(self, a):
         self.result = math.sqrt(a)
         return self.result
+
+    def read_csv(self,obj):
+
+        data = pd.read_csv(obj)
+        data = data.values
+
+
+        return data
+
 
 
