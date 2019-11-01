@@ -1,5 +1,4 @@
 import unittest
-import pandas as ps
 from calculator import calculator
 
 class MyTestCase(unittest.TestCase):
