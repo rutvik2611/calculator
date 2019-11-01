@@ -13,7 +13,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.calculator, calculator)
 
     def test_add_from_csv(self):
-        x = self.calculator.read_csv("../CSV/uadd.csv")
+        x = self.calculator.read_csv("../src/CSV/uadd.csv")
 
         a = []
         b = []
@@ -27,7 +27,7 @@ class MyTestCase(unittest.TestCase):
 
 
     def test_subtraction(self):
-        x = self.calculator.read_csv("../CSV/Unit Test Subtraction.csv")
+        x = self.calculator.read_csv("../src/CSV/Unit Test Subtraction.csv")
 
         a = []
         b = []
@@ -42,7 +42,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_multiplication(self):
 
-            x = self.calculator.read_csv("../CSV/Unit Test Multiplication.csv")
+            x = self.calculator.read_csv("../src/CSV/Unit Test Multiplication.csv")
 
             a = []
             b = []
@@ -57,7 +57,7 @@ class MyTestCase(unittest.TestCase):
 
 
     def test_division(self):
-        x = self.calculator.read_csv("../CSV/Unit Test Division.csv")
+        x = self.calculator.read_csv("../src/CSV/Unit Test Division.csv")
 
         a = []
         b = []
@@ -71,7 +71,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_square(self):
 
-        x = self.calculator.read_csv("../CSV/Unit Test Square.csv")
+        x = self.calculator.read_csv("../src/CSV/Unit Test Square.csv")
 
         a = []
         b = []
@@ -85,7 +85,7 @@ class MyTestCase(unittest.TestCase):
 
 
     def test_squareRoot(self):
-        x = self.calculator.read_csv("../CSV/Unit Test Square Root.csv")
+        x = self.calculator.read_csv("../src/CSV/Unit Test Square Root.csv")
 
         a = []
         b = []
